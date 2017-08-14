@@ -1,0 +1,7 @@
+FROM rethinkdb:latest
+
+RUN apt-get update \
+    && apt-get install -y python-pip \
+  && pip install rethinkdb
+  
+CMD [“rethinkdb”, “--bind”, “all”]
